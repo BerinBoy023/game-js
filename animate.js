@@ -96,16 +96,16 @@ function animate()
                        projectiles.splice(projIndex, 1);
                    }, 0);
                }
-               if( score >= 1000 && !levelOne 
-                || score >= 2000 && !levelTwo 
-                || score >= 3000 && !levelThree
-                || score >= 4000 && !levelFour
-                || score >= 5000 && !levelFive
-                || score >= 6000 && !levelSix
-                || score >= 7000 && !levelSeven 
-                || score >= 8000 && !levelEight
-                || score >= 9000 && !levelNine
-                || score >= 10000 && !levelTen
+               if( score >= 10000 && !levelOne 
+                || score >= 20000 && !levelTwo 
+                || score >= 30000 && !levelThree
+                || score >= 40000 && !levelFour
+                || score >= 50000 && !levelFive
+                || score >= 60000 && !levelSix
+                || score >= 70000 && !levelSeven 
+                || score >= 80000 && !levelEight
+                || score >= 90000 && !levelNine
+                || score >= 100000 && !levelTen
                 )
                {
                    cancelAnimationFrame(animationId);
