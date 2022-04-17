@@ -1,0 +1,47 @@
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    body{
+        margin: 0px;
+        background: black;
+    }
+</style>
+
+<div class="fixed text-white text-sm ml-2 mt-1 select-none">
+    <span>Score: </span> 
+    <span id="scoreEl">0</span>
+</div>
+
+<div id="modelEl" class="fixed inset-0 flex items-center justify-center">
+    <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScore">0</h1>
+        <p class="text-sm text-gray-700 mb-4">Points</p>
+        <div>
+            <button id="startGameBtn" class="bg-blue-500 text-white w-full py-3 rounded-full text-sm">Start Game</button>
+        </div>
+    </div>
+</div>
+
+<div id="levelEl" class="fixed inset-0 flex items-center justify-center" style="display: none">
+    <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none mb-4">Level 1 Completed</h1>
+            <label for="bigProjectile">Big Baby</label>
+            <input type="radio" id="bigProjectile" name="power" value="bigProjectile" checked="checked">
+            <label for="fastProjectile">Fast Baby</label>
+            <input type="radio" id="fastProjectile" name="power" value="fastProjectile">
+            <label for="strongProjectile">Strong Baby</label>
+            <input type="radio" id="strongProjectile" name="power" value="strongProjectile">
+        <div class="mt-4">
+            <button id="continueGameBtn" class="bg-blue-500 text-white w-full py-3 rounded-full text-sm">Continue</button>
+        </div>
+    </div>
+</div>
+
+<canvas></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="objects/player.js"></script>
+<script src="objects/particle.js"></script>
+<script src="objects/enemy.js"></script>
+<script src="objects/projectile.js"></script>
+<script src="animate.js"></script>
+<script src="index.js"></script>
