@@ -25,6 +25,7 @@ let levelSeven = false;
 let levelEight = false;
 let levelNine = false;
 let levelTen = false;
+let bouncyProjectile = false;
 let spawnInterval;
 let shootSpeed = 700;
 let enemySpeed = 1200;
@@ -53,8 +54,8 @@ function init(is_level)
         shootSize = 5;
         score = 0;
         strongProjectile = false;
+        bouncyProjectile = false;
         projectileColor = 'white'
-
     }
     scoreEl.innerHTML = score;
     bigScore.innerHTML = score;
@@ -127,7 +128,7 @@ startGameBtn.addEventListener('click',()=>{
 
 continueGameBtn.addEventListener('click',()=>{
     init(true);
-    enemySpeed -= 150;
+    enemySpeed -= 200;
     if( enemySpeed < 200 )
         enemySpeed = 200;
     for( var i=0; i< levelRadios.length; i++ )
@@ -145,6 +146,9 @@ continueGameBtn.addEventListener('click',()=>{
                 case 'strongProjectile':
                     strongProjectile = true;
                     projectileColor = 'red'
+                    break;
+                case 'bouncyProjectile':
+                    bouncyProjectile = true;
                     break;
             }
         }

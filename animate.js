@@ -63,8 +63,14 @@ function animate()
            const dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y);
 
            // projectile and enemy collided 
-           if( dist - enemy.radius - projectile.radius < 1) 
+           if( dist - enemy.radius - projectile.radius < 1 ) 
            {
+               if( bouncyProjectile )
+               {
+                   projectiles.push(new Projectile(projectile.x,projectile.y,5,'red', {x: (Math.random() - 0.5) * (Math.random() * 5)
+                    , y: (Math.random() - 0.5) * (Math.random() * 5)}));
+                }
+
                // Create explosions
                for( let i = 0; i < enemy.radius * 2; i++)
                {
