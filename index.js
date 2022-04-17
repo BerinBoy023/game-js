@@ -27,7 +27,7 @@ let levelNine = false;
 let levelTen = false;
 let spawnInterval;
 let shootSpeed = 700;
-let enemySpeed = 1000;
+let enemySpeed = 1100;
 let shootSize = 5;
 let projectileColor = 'white';
 // Placement of the player
@@ -49,7 +49,7 @@ function init(is_level)
     if( !is_level )
     {
         shootSpeed = 700;
-        enemySpeed = 1000;
+        enemySpeed = 1100;
         shootSize = 5;
         score = 0;
         strongProjectile = false;
