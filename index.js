@@ -27,7 +27,7 @@ let levelNine = false;
 let levelTen = false;
 let spawnInterval;
 let shootSpeed = 700;
-let enemySpeed = 1100;
+let enemySpeed = 1200;
 let shootSize = 5;
 let projectileColor = 'white';
 // Placement of the player
@@ -49,7 +49,7 @@ function init(is_level)
     if( !is_level )
     {
         shootSpeed = 700;
-        enemySpeed = 1100;
+        enemySpeed = 1200;
         shootSize = 5;
         score = 0;
         strongProjectile = false;
@@ -127,7 +127,7 @@ startGameBtn.addEventListener('click',()=>{
 
 continueGameBtn.addEventListener('click',()=>{
     init(true);
-    enemySpeed -= 80;
+    enemySpeed -= 150;
     if( enemySpeed < 200 )
         enemySpeed = 200;
     for( var i=0; i< levelRadios.length; i++ )
